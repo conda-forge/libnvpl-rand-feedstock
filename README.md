@@ -57,14 +57,14 @@ Current release info
 Installing libnvpl-rand
 =======================
 
-Installing `libnvpl-rand` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `libnvpl-rand` from the `conda-forge/label/nvpl_rc` channel can be achieved by adding `conda-forge/label/nvpl_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/nvpl_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libnvpl-rand-dev, libnvpl-rand0` can be installed with `conda`:
+Once the `conda-forge/label/nvpl_rc` channel has been enabled, `libnvpl-rand-dev, libnvpl-rand0` can be installed with `conda`:
 
 ```
 conda install libnvpl-rand-dev libnvpl-rand0
@@ -79,26 +79,26 @@ mamba install libnvpl-rand-dev libnvpl-rand0
 It is possible to list all of the versions of `libnvpl-rand-dev` available on your platform with `conda`:
 
 ```
-conda search libnvpl-rand-dev --channel conda-forge
+conda search libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search libnvpl-rand-dev --channel conda-forge
+mamba search libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search libnvpl-rand-dev --channel conda-forge
+mamba repoquery search libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 
 # List packages depending on `libnvpl-rand-dev`:
-mamba repoquery whoneeds libnvpl-rand-dev --channel conda-forge
+mamba repoquery whoneeds libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 
 # List dependencies of `libnvpl-rand-dev`:
-mamba repoquery depends libnvpl-rand-dev --channel conda-forge
+mamba repoquery depends libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 ```
 
 
