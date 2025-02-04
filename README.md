@@ -18,12 +18,30 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://app.travis-ci.com/conda-forge/libnvpl-rand-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/libnvpl-rand-feedstock/main.svg?label=Linux">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23602&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libnvpl-rand-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23602&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libnvpl-rand-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -39,14 +57,14 @@ Current release info
 Installing libnvpl-rand
 =======================
 
-Installing `libnvpl-rand` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `libnvpl-rand` from the `conda-forge/label/nvpl_rc` channel can be achieved by adding `conda-forge/label/nvpl_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/nvpl_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libnvpl-rand-dev, libnvpl-rand0` can be installed with `conda`:
+Once the `conda-forge/label/nvpl_rc` channel has been enabled, `libnvpl-rand-dev, libnvpl-rand0` can be installed with `conda`:
 
 ```
 conda install libnvpl-rand-dev libnvpl-rand0
@@ -61,26 +79,26 @@ mamba install libnvpl-rand-dev libnvpl-rand0
 It is possible to list all of the versions of `libnvpl-rand-dev` available on your platform with `conda`:
 
 ```
-conda search libnvpl-rand-dev --channel conda-forge
+conda search libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search libnvpl-rand-dev --channel conda-forge
+mamba search libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search libnvpl-rand-dev --channel conda-forge
+mamba repoquery search libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 
 # List packages depending on `libnvpl-rand-dev`:
-mamba repoquery whoneeds libnvpl-rand-dev --channel conda-forge
+mamba repoquery whoneeds libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 
 # List dependencies of `libnvpl-rand-dev`:
-mamba repoquery depends libnvpl-rand-dev --channel conda-forge
+mamba repoquery depends libnvpl-rand-dev --channel conda-forge/label/nvpl_rc
 ```
 
 
