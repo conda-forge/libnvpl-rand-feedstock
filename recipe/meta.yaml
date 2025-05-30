@@ -1,4 +1,4 @@
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 {% set soversion = ".".join(version.split(".")[:3]) %}
 {% set somajor = version.split(".")[0] %}
 {% set arm_variant_type = arm_variant_type|default("sbsa") %}
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/nvpl/redist/nvpl_rand/linux-sbsa/nvpl_rand-linux-sbsa-{{ version }}-archive.tar.xz
-  sha256: 4a75b8256d46d22fc00f4ef3bb8d0d7c5055034e587cb04bd56365a396bc281b
+  sha256: 1eb5c2a5e98390b2bc76c3218837916df64d33cce220169811e14ecead36933f
 
 build:
-  number: 1
+  number: 0
   # nvpl is only for ARM architecture
   skip: true  # [not aarch64]
   script:
