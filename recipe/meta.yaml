@@ -12,7 +12,7 @@ source:
   sha256: 1eb5c2a5e98390b2bc76c3218837916df64d33cce220169811e14ecead36933f
 
 build:
-  number: 0
+  number: 1
   # nvpl is only for ARM architecture
   skip: true  # [not aarch64]
   script:
@@ -42,7 +42,7 @@ outputs:
         - libnvpl-common-dev
       run:
         - _nvpl_dev_mutex
-        - {{ pin_compatible("libnvpl-common-dev", exact=True) }}
+        - {{ pin_compatible("libnvpl-common-dev", max_pin="x.x.x") }}
         - {{ pin_subpackage("libnvpl-rand" ~ somajor, exact=True) }}
       run_constrained:
         - arm-variant * {{ arm_variant_type }}
